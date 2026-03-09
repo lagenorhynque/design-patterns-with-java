@@ -1,9 +1,9 @@
-package s_chapter02
+package design_patterns_with_java.scala.chapter02
 
 import java.io.{ FileInputStream, FileOutputStream }
 import java.util.Properties
 
-trait FileIO {
+trait FileIO:
   def readFromFile(filename: String): Unit
 
   def writeToFile(filename: String): Unit
@@ -11,9 +11,9 @@ trait FileIO {
   def setValue(key: String, value: String): Unit
 
   def getValue(key: String): String
-}
 
-class FileProperties extends FileIO {
+
+class FileProperties extends FileIO:
   private val properites = new Properties
 
   def readFromFile(filename: String): Unit =
@@ -27,10 +27,9 @@ class FileProperties extends FileIO {
 
   def getValue(key: String): String =
     properites.getProperty(key)
-}
 
-object Main {
-  def main(args: Array[String]): Unit = {
+object Main:
+  def main(args: Array[String]): Unit =
     val f: FileIO = new FileProperties
     f.readFromFile("file.txt")
     f.setValue("month", "4")
@@ -38,5 +37,3 @@ object Main {
     f.writeToFile("newfile1.txt")
     f.setValue("year", "2004")
     f.writeToFile("newfile2.txt")
-  }
-}
