@@ -1,4 +1,3 @@
-design-patterns-with-java
-=========================
+# design-patterns-with-java
 
-Solutions to the exercises from [『増補改訂版Java言語で学ぶデザインパターン入門』](http://www.hyuki.com/dp/).
+Study notes on [『Java言語で学ぶデザインパターン入門 第3版』](https://www.sbcr.jp/product/4815609801/).
