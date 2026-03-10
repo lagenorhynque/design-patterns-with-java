@@ -6,31 +6,26 @@
    (java.util
     Properties)))
 
-(defprotocol FileIO
-  (read-from-file [this filename])
-  (write-to-file [this filename])
-  (set-value [this key value])
-  (get-value [this key]))
-
-(deftype FileProperties
-  [properties]
-  FileIO
-  (read-from-file [_ filename]
-    (.. properties (load (FileInputStream. filename))))
-  (write-to-file [_ filename]
-    (.. properties (store (FileOutputStream. filename)
-                          "written by FileProperties")))
-  (set-value [_ key value]
-    (.. properties (setProperty key value)))
-  (get-value [_ key]
-    (.. properties (getProperty key))))
-
 (defn file-properties []
-  (->FileProperties (Properties.)))
+  (let [properties (Properties.)]
+    {:read-from-file
+     (fn [filename]
+       (.. properties (load (FileInputStream. filename))))
+     :write-to-file
+     (fn [filename]
+       (.. properties (store (FileOutputStream. filename)
+                             "written by FileProperties")))
+     :set-value
+     (fn [key value]
+       (.. properties (setProperty key value)))
+     :get-value
+     (fn [key]
+       (.. properties (getProperty key)))}))
 
 (defn -main []
-  ;; protocol and deftype
-  (doto (file-properties)
+  ;; map of closures
+  (let [{:keys [read-from-file set-value write-to-file]}
+        (file-properties)]
     (read-from-file "file.txt")
     (set-value "month" "4")
     (set-value "day" "21")
