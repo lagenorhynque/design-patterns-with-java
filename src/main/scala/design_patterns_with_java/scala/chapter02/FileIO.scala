@@ -5,13 +5,9 @@ import java.util.Properties
 
 trait FileIO:
   def readFromFile(filename: String): Unit
-
   def writeToFile(filename: String): Unit
-
   def setValue(key: String, value: String): Unit
-
   def getValue(key: String): String
-
 
 class FileProperties extends FileIO:
   private val properites = new Properties
@@ -29,7 +25,8 @@ class FileProperties extends FileIO:
     properites.getProperty(key)
 
 @main
-def main() =
+def fileIOExample() =
+  // trait implementation
   val f: FileIO = new FileProperties
   f.readFromFile("file.txt")
   f.setValue("month", "4")

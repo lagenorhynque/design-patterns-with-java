@@ -1,4 +1,4 @@
-(ns design-patterns-with-java.clj.chapter01.core)
+(ns design-patterns-with-java.clj.chapter01.bookshelf)
 
 (defrecord Book [name])
 
@@ -9,6 +9,7 @@
     (seq books)))
 
 (defn -main []
+  ;; Seqable
   (let [bookshelf (->Bookshelf
                    [(->Book "Around the World in 80 Days")
                     (->Book "Bible")

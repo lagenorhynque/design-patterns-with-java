@@ -1,4 +1,4 @@
-(ns design-patterns-with-java.clj.chapter02.core
+(ns design-patterns-with-java.clj.chapter02.file-io
   (:import
    (java.io
     FileInputStream
@@ -29,6 +29,7 @@
   (->FileProperties (Properties.)))
 
 (defn -main []
+  ;; protocol and deftype
   (doto (file-properties)
     (read-from-file "file.txt")
     (set-value "month" "4")

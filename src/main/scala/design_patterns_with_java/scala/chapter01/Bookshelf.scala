@@ -6,7 +6,8 @@ class Bookshelf(books: Book*) extends Iterable[Book]:
   def iterator: Iterator[Book] = books.iterator
 
 @main
-def main() =
+def bookshelfExample() =
+  // Iterable
   val bookshelf = new Bookshelf(
     Book("Around the World in 80 Days"),
     Book("Bible"),
