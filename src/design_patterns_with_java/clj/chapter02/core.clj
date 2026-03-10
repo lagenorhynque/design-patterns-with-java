@@ -28,7 +28,7 @@
 (defn file-properties []
   (->FileProperties (Properties.)))
 
-(defn -main [& _]
+(defn -main []
   (doto (file-properties)
     (read-from-file "file.txt")
     (set-value "month" "4")

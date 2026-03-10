@@ -8,7 +8,7 @@
   (seq [_]
     (seq books)))
 
-(defn -main [& _]
+(defn -main []
   (let [bookshelf (->Bookshelf
                    [(->Book "Around the World in 80 Days")
                     (->Book "Bible")
