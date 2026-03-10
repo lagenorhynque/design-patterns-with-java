@@ -15,14 +15,14 @@
 (extend-protocol FileIO
   Properties
   (read-from-file [this filename]
-    (.. this (load (FileInputStream. filename))))
+    (.load this (FileInputStream. filename)))
   (write-to-file [this filename]
-    (.. this (store (FileOutputStream. filename)
-                    "written by FileProperties")))
+    (.store this (FileOutputStream. filename)
+            "written by FileProperties"))
   (set-value [this key value]
-    (.. this (setProperty key value)))
+    (.setProperty this key value))
   (get-value [this key]
-    (.. this (getProperty key))))
+    (.getProperty this key)))
 
 (defn -main []
   ;; protocol extension

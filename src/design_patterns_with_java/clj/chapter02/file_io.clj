@@ -10,17 +10,17 @@
   (let [properties (Properties.)]
     {:read-from-file
      (fn [filename]
-       (.. properties (load (FileInputStream. filename))))
+       (.load properties (FileInputStream. filename)))
      :write-to-file
      (fn [filename]
-       (.. properties (store (FileOutputStream. filename)
-                             "written by FileProperties")))
+       (.store properties (FileOutputStream. filename)
+               "written by FileProperties"))
      :set-value
      (fn [key value]
-       (.. properties (setProperty key value)))
+       (.setProperty properties key value))
      :get-value
      (fn [key]
-       (.. properties (getProperty key)))}))
+       (.getProperty properties key))}))
 
 (defn -main []
   ;; map of closures
