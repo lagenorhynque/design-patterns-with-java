@@ -26,7 +26,7 @@ class FileProperties extends FileIO:
 
 @main
 def fileIOExample() =
-  // trait implementation
+  // trait implementation by delegation
   val f: FileIO = new FileProperties
   f.readFromFile("file.txt")
   f.setValue("month", "4")
