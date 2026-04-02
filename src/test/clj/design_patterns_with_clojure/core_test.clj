@@ -1,8 +1,7 @@
 (ns design-patterns-with-clojure.core-test
   (:require
-   [clojure.test :refer :all]
-   [design-patterns-with-clojure.core :refer :all]))
+   [clojure.test :as t]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(t/deftest a-test
+  (t/testing "FIXME, I fail."
+    (t/is (= 0 1))))

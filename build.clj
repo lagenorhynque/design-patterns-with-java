@@ -1,13 +1,16 @@
 (ns build
   (:refer-clojure :exclude [test])
-  (:require [clojure.tools.deps :as t]
-            [clojure.tools.build.api :as b]
-            [deps-deploy.deps-deploy :as dd]))
+  (:require
+   [clojure.tools.build.api :as b]
+   [clojure.tools.deps :as t]
+   [deps-deploy.deps-deploy :as dd]))
 
 (def lib 'net.clojars.design-patterns-with-java/design-patterns-with-java.core)
 (def version "0.1.0-SNAPSHOT")
+
 #_ ; alternatively, use MAJOR.MINOR.COMMITS:
 (def version (format "1.0.%s" (b/git-count-revs nil)))
+
 (def class-dir "target/classes")
 
 (defn test "Run all the tests." [opts]
