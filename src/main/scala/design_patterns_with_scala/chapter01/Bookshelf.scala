@@ -1,4 +1,4 @@
-package design_patterns_with_java.scala.chapter01
+package design_patterns_with_scala.chapter01
 
 case class Book(name: String)
 

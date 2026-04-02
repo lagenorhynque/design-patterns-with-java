@@ -1,4 +1,4 @@
-(ns design-patterns-with-java.clj.chapter02.banner)
+(ns design-patterns-with-clojure.chapter02.banner)
 
 (defn show-with-paren [s]
   (println (str "(" s ")")))

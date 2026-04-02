@@ -1,4 +1,4 @@
-(ns design-patterns-with-java.clj.chapter01.bookshelf)
+(ns design-patterns-with-clojure.chapter01.bookshelf)
 
 (defrecord Book [name])
 

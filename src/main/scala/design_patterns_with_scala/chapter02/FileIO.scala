@@ -1,4 +1,4 @@
-package design_patterns_with_java.scala.chapter02
+package design_patterns_with_scala.chapter02
 
 import java.io.{ FileInputStream, FileOutputStream }
 import java.util.Properties

@@ -1,4 +1,4 @@
-package design_patterns_with_java.scala.chapter02
+package design_patterns_with_scala.chapter02
 
 trait Print:
   def showWithParen(): Unit

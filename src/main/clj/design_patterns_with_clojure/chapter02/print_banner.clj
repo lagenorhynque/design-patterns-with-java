@@ -1,6 +1,6 @@
-(ns design-patterns-with-java.clj.chapter02.print-banner
+(ns design-patterns-with-clojure.chapter02.print-banner
   (:require
-   [design-patterns-with-java.clj.chapter02.banner :as banner]))
+   [design-patterns-with-clojure.chapter02.banner :as banner]))
 
 (defn print-weak [s]
   (banner/show-with-paren s))

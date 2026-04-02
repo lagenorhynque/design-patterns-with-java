@@ -1,7 +1,7 @@
-(ns design-patterns-with-java.clj.core-test
+(ns design-patterns-with-clojure.core-test
   (:require
    [clojure.test :refer :all]
-   [design-patterns-with-java.clj.core :refer :all]))
+   [design-patterns-with-clojure.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

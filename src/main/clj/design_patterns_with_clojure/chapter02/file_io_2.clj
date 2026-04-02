@@ -1,4 +1,4 @@
-(ns design-patterns-with-java.clj.chapter02.file-io-2
+(ns design-patterns-with-clojure.chapter02.file-io-2
   (:import
    (java.io
     FileInputStream
