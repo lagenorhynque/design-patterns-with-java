@@ -1,6 +1,6 @@
 package design_patterns_with_scala.chapter02
 
-import java.io.{ FileInputStream, FileOutputStream }
+import java.io.{FileInputStream, FileOutputStream}
 import java.util.Properties
 
 trait FileIO:
@@ -16,7 +16,10 @@ class FileProperties extends FileIO:
     properites.load(new FileInputStream(filename))
 
   def writeToFile(filename: String): Unit =
-    properites.store(new FileOutputStream(filename), "written by FileProperties")
+    properites.store(
+      new FileOutputStream(filename),
+      "written by FileProperties"
+    )
 
   def setValue(key: String, value: String): Unit =
     properites.setProperty(key, value)

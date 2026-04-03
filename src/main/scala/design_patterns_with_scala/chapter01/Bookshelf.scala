@@ -12,6 +12,6 @@ def bookshelfExample() =
     Book("Around the World in 80 Days"),
     Book("Bible"),
     Book("Cinderella"),
-    Book("Daddy-Long-Legs"),
+    Book("Daddy-Long-Legs")
   )
   for book <- bookshelf do println(book.name)
