@@ -20,7 +20,7 @@ clj-kondo-lint:
 
 .PHONY: joker-lint
 joker-lint:
-	@joker --lint --working-dir .
+	@joker --lint --working-dir src
 
 # Scala
 
